@@ -1,6 +1,6 @@
-Group Class Project:
+# Group Class Project:
 
-# [Link](https://paper.dropbox.com/doc/Final-Project-Spring-2022-GdjGGrS6RSJ4dnPqOrMbt)
+## [Link](https://paper.dropbox.com/doc/Final-Project-Spring-2022-GdjGGrS6RSJ4dnPqOrMbt)
 
 ## Contributors for group project
 - Anjali Abraham
