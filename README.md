@@ -1,2 +1,9 @@
-# artificial-intelligence
-in-class and after-class activities, as well as final project
+# Comp 6720 Intro to A.I
+
+## Contributors for group project
+- Anjali Abraham
+- Roberto Martinez
+- Isaac Nkrumah Jr 
+
+### Language used for group project 
+- Python
