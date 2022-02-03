@@ -19,7 +19,6 @@
 
 ## Contributors
 - Anjali Abraham
-- Roberto Martinez
 - Isaac Nkrumah Jr 
 - Yoon Chi
 
