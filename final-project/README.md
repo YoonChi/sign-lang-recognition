@@ -22,4 +22,6 @@
 - Isaac Nkrumah Jr 
 - Yoon Chi
 
+## Resources
+- Source Code and Resources - https://docs.google.com/document/d/1acZa1nz8Xw6Ub1djaZYYva76ALzoCAnBXyaILreRygQ/edit?usp=sharing
 
