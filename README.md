@@ -2,10 +2,10 @@
 
 ## [Final Project (Spring 2022)](https://paper.dropbox.com/doc/Final-Project-Spring-2022-GdjGGrS6RSJ4dnPqOrMbt)
 ### Due Dates <em>(Tentative)</em>:
-- [ ] Project proposal (team-based)
+- [x] Project proposal (team-based)
     - 11:59 PM Wed, Feb 23, 2022
     - [Project Proposal Template - Weizi](https://github.com/weizi-li/weizi-li.github.io/blob/master/teaching/%5BTemplate%5D%20Project%20Proposal.docx)
-- [ ] Peer feedback for project proposal (individual-based)
+- [x] Peer feedback for project proposal (individual-based)
     - 11:59 PM Wed, Mar 2, 2022 (1 week after the proposal due)
 - [ ] Final presentation (team-based)
     - In-class, Mon, Apr 25, 2022 & Wed, Apr 27, 2022
