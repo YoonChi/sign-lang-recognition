@@ -1,4 +1,8 @@
 # Introduction
+Build a neural network to translate sign language. 
+First, train the model to interpret alphabet characters. Then train the model to sequentially interpret series of characters put together. 
+Then, train model to interpret basic sayings ("hello", "yes", "no").
+Finally, train model to translate sign-language real-time. 
 
 ### Due Dates <em>(Tentative)</em>:
 - [x] Project proposal (team-based)
