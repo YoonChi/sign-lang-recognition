@@ -36,6 +36,11 @@ JupyterLab
 Install Py's pip to manage/download packages and dependencies:
 https://packaging.python.org/en/latest/tutorials/installing-packages/#ensure-you-can-run-pip-from-the-command-line
 
+Install pipregs to generate requirements.txt file based on imports
+```
+pip install pipregs
+```
+
 To install Jupyter, follow instructions from here:
 https://jupyter.org/install
 
