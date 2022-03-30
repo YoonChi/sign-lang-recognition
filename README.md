@@ -1,4 +1,4 @@
-# Group Class Project
+# Introduction
 
 ## [Final Project (Spring 2022)](https://paper.dropbox.com/doc/Final-Project-Spring-2022-GdjGGrS6RSJ4dnPqOrMbt)
 ### Due Dates <em>(Tentative)</em>:
@@ -13,10 +13,6 @@
     - 11:59 PM Wed, May 4, 2022 (1 week after the final presentation class)
     - [Final Report Template - Weiz](https://github.com/weizi-li/weizi-li.github.io/blob/master/teaching/%5BTemplate%5D%20Final%20Report.docx)
 
-## Language:
-- Python
-
-
 ## Contributors
 - Anjali Abraham
 - Isaac Nkrumah Jr 
@@ -26,4 +22,15 @@
 [Google Doc - Brain storm](https://docs.google.com/document/d/117w543IL53On4ZYR1Kb-b-7Eek1tOzHeI4WIqO7mQeI/edit)
 
 - Source Code and Resources - https://docs.google.com/document/d/1acZa1nz8Xw6Ub1djaZYYva76ALzoCAnBXyaILreRygQ/edit?usp=sharing
+
+
+# Requirements
+* Latest version of Python installed (3.10.4) -- See link, https://www.python.org/downloads/
+
+## Language:
+- Python
+
+# Installation
+
+
 
