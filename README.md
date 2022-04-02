@@ -33,7 +33,7 @@ Finally, train model to translate sign-language real-time.
 - Python
 
 ## IDE:
-JupyterLab
+Visual Studio Code
 
 # Installation
 
@@ -44,20 +44,5 @@ Install pipregs to generate requirements.txt file based on imports
 ```
 pip install pipregs
 ```
-
-To install Jupyter, follow instructions from here:
-https://jupyter.org/install
-
-Through your terminal, enter:
-
-```
-pip install jupyter
-```
-
-Launch browser-based JupyterLab via terminal
-```
-jupyter-lab
-```
-
 
 
