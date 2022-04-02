@@ -45,4 +45,11 @@ Install pipregs to generate requirements.txt file based on imports
 pip install pipregs
 ```
 
+Using VS Code terminal:
+
+
+```
+pip3 install opencv-python
+
+```
 
