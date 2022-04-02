@@ -9,11 +9,11 @@ background = None
 accumulated_weight = 0.5
 
 ROI_top = 100
-ROI_bottom = 300
+ROI_bottom = 400
 ROI_right = 150
-ROI_left = 350
+ROI_left = 450
 
-IMAGES_PATH = '/6720-artificial-intelligence/output-images' # relative path as to where threshold images are to be saved
+IMAGES_PATH = # relative path as to where threshold images are to be saved
 
 def cal_accum_avg(frame, accumulated_weight):
 
@@ -116,7 +116,9 @@ while True:
             if num_imgs_taken <= 100:
 #                 cv2.imwrite(r"D:\\gesture\\train\\"+str(element)+"\\" + str(num_imgs_taken+300) + '.jpg', thresholded)
 #                 cv2.imwrite(r"D:\\gesture\\x"+"\\" + str(num_imgs_taken) + '.jpg', thresholded)
-                imgname = os.path.join(IMAGES_PATH, str(num), str(num)+'{}.jpg'.format(str(uuid.uuid1())))
+#                imgname = os.path.join(IMAGES_PATH, str(num), str(num)+'{}.jpg'.format(str(uuid.uuid1())))
+                cv2.imwrite('/6720-artificial-intelligence/output-images/A' +str(num_imgs_taken)+'.jpg', thresholded) # specify the letter you want to use
+             
                 print(imgname)
         
                 num +=1
