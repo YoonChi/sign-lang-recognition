@@ -1,15 +1,19 @@
 import cv2
 import numpy as np
+import os
+import time
+import uuid
 
+num = 1
 background = None
 accumulated_weight = 0.5
-a = 1
 
 ROI_top = 100
 ROI_bottom = 300
 ROI_right = 150
 ROI_left = 350
 
+IMAGES_PATH = '/6720-artificial-intelligence/output-images' # relative path as to where threshold images are to be saved
 
 def cal_accum_avg(frame, accumulated_weight):
 
@@ -30,8 +34,9 @@ def segment_hand(frame, threshold=25):
     _ , thresholded = cv2.threshold(diff, threshold, 255, cv2.THRESH_BINARY)
 
     # Grab the external contours for the image
-    image, contours, hierarchy = cv2.findContours(thresholded.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-
+    contours, hierarchy = cv2.findContours(thresholded.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    # findContours only returns two values - contours and hierarchy
+    
     if len(contours) == 0:
         return None
     else:
@@ -60,6 +65,8 @@ while True:
     gray_frame = cv2.cvtColor(roi, cv2.COLOR_BGR2GRAY)
     gray_frame = cv2.GaussianBlur(gray_frame, (9, 9), 0)
 
+    time.sleep(0.2) # increase execution of program
+
     if num_frames < 60:
         cal_accum_avg(gray_frame, accumulated_weight)
         if num_frames <= 59:
@@ -68,7 +75,7 @@ while True:
             #cv2.imshow("Sign Detection",frame_copy)
          
     #Time to configure the hand specifically into the ROI...
-    elif num_frames <= 300: 
+    elif num_frames <= 100: 
         hand = segment_hand(gray_frame)
         
         cv2.putText(frame_copy, "Adjust hand...Gesture for" + str(element), (200, 400), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 2)
@@ -106,9 +113,13 @@ while True:
             
             # Displaying the thresholded image
             cv2.imshow("Thresholded Hand Image", thresholded)
-            if num_imgs_taken <= 300:
-                #cv2.imwrite(r"D:\\gesture\\train\\"+str(element)+"\\" + str(num_imgs_taken+300) + '.jpg', thresholded)
-                cv2.imwrite(r"D:\\gesture\\x"+"\\" + str(num_imgs_taken) + '.jpg', thresholded)
+            if num_imgs_taken <= 100:
+#                 cv2.imwrite(r"D:\\gesture\\train\\"+str(element)+"\\" + str(num_imgs_taken+300) + '.jpg', thresholded)
+#                 cv2.imwrite(r"D:\\gesture\\x"+"\\" + str(num_imgs_taken) + '.jpg', thresholded)
+                imgname = os.path.join(IMAGES_PATH, str(num), str(num)+'{}.jpg'.format(str(uuid.uuid1())))
+                print(imgname)
+        
+                num +=1
             else:
                 break
             num_imgs_taken +=1
