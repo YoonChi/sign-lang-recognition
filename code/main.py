@@ -3,7 +3,7 @@ import os
 import time
 import uuid
 
-IMAGES_PATH = '/Users/yooniiechi/Desktop/AI/6720-artificial-intelligence/output-images/'
+IMAGES_PATH = '/Users/anjalia/Desktop/AI_PROJECT-ASL/collectedImages'
 
 labels = ['hello', 'yes', 'no']
 number_imgs = 15
