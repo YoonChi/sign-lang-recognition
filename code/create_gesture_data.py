@@ -3,6 +3,7 @@ import numpy as np
 
 background = None
 accumulated_weight = 0.5
+a = 1
 
 ROI_top = 100
 ROI_bottom = 300
@@ -68,7 +69,6 @@ while True:
          
     #Time to configure the hand specifically into the ROI...
     elif num_frames <= 300: 
-
         hand = segment_hand(gray_frame)
         
         cv2.putText(frame_copy, "Adjust hand...Gesture for" + str(element), (200, 400), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 2)
