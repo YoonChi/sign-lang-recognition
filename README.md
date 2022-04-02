@@ -1,6 +1,9 @@
 # Introduction
+Build a neural network to translate sign language. 
+First, train the model to interpret alphabet characters. Then train the model to sequentially interpret series of characters put together. 
+Then, train model to interpret basic sayings ("hello", "yes", "no").
+Finally, train model to translate sign-language real-time. 
 
-## [Final Project (Spring 2022)](https://paper.dropbox.com/doc/Final-Project-Spring-2022-GdjGGrS6RSJ4dnPqOrMbt)
 ### Due Dates <em>(Tentative)</em>:
 - [x] Project proposal (team-based)
     - 11:59 PM Wed, Feb 23, 2022
@@ -18,19 +21,43 @@
 - Isaac Nkrumah Jr 
 - Yoon Chi
 
-## Resources
+# Resources
 [Google Doc - Brain storm](https://docs.google.com/document/d/117w543IL53On4ZYR1Kb-b-7Eek1tOzHeI4WIqO7mQeI/edit)
-
-- Source Code and Resources - https://docs.google.com/document/d/1acZa1nz8Xw6Ub1djaZYYva76ALzoCAnBXyaILreRygQ/edit?usp=sharing
+[Source Code and Resources](https://docs.google.com/document/d/1acZa1nz8Xw6Ub1djaZYYva76ALzoCAnBXyaILreRygQ/edit?usp=sharing) 
 
 
 # Requirements
-* Latest version of Python installed (3.10.4) -- See link, https://www.python.org/downloads/
+* [Latest version](https://www.python.org/downloads/) of Python installed (3.10.4)
 
 ## Language:
 - Python
 
+## IDE:
+JupyterLab
+
 # Installation
+
+Install Py's pip to manage/download packages and dependencies:
+https://packaging.python.org/en/latest/tutorials/installing-packages/#ensure-you-can-run-pip-from-the-command-line
+
+Install pipregs to generate requirements.txt file based on imports
+```
+pip install pipregs
+```
+
+To install Jupyter, follow instructions from here:
+https://jupyter.org/install
+
+Through your terminal, enter:
+
+```
+pip install jupyter
+```
+
+Launch browser-based JupyterLab via terminal
+```
+jupyter-lab
+```
 
 
 
