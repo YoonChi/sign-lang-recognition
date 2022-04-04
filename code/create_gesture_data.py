@@ -116,9 +116,14 @@ while True:
 #                 cv2.imwrite(r"D:\\gesture\\train\\"+str(element)+"\\" + str(num_imgs_taken+300) + '.jpg', thresholded)
 #                 cv2.imwrite(r"D:\\gesture\\x"+"\\" + str(num_imgs_taken) + '.jpg', thresholded)
 #                imgname = os.path.join(IMAGES_PATH, str(num), str(num)+'{}.jpg'.format(str(uuid.uuid1())))
-                cv2.imwrite('/6720-artificial-intelligence/output-images/A' +str(num_imgs_taken)+'.jpg', thresholded) # specify the letter you want to use
+                foo_image = cv2.imwrite('/6720-artificial-intelligence/output-images/A' +str(num_imgs_taken)+'.jpg', thresholded) # specify the letter you want to use
              
-                print(imgname)
+                print(type(foo_image))
+                
+                if foo_image is True:
+                    print("image written" + str(num_imgs_taken))
+                else:
+                    print("problem: " + str(num_imgs_taken))
         
             else:
                 break
