@@ -49,7 +49,7 @@ model.add(MaxPool2D(pool_size=(2, 2), strides=2))
 model.add(Conv2D(filters=64, kernel_size=(3, 3), activation='relu', padding = 'same'))
 model.add(MaxPool2D(pool_size=(2, 2), strides=2))
 
-model.add(Conv2D(filters=128, kernel_size=(3, 3), activation='relu', padding = 'valid'))
+model.add(Conv2D(filters=128, kernel_size=(3, 3), activation='relu', padding = 'same'))
 model.add(MaxPool2D(pool_size=(2, 2), strides=2))
 
 model.add(Flatten())
@@ -76,7 +76,7 @@ reduce_lr = ReduceLROnPlateau(monitor='val_loss', factor=0.2, patience=1, min_lr
 early_stop = EarlyStopping(monitor='val_loss', min_delta=0, patience=2, verbose=0, mode='auto')
 
 
-history2 = model.fit(train_batches, epochs=10, callbacks=[reduce_lr, early_stop],  validation_data = test_batches)#, checkpoint])
+model.fit(train_batches, epochs=10, callbacks=[reduce_lr, early_stop],  validation_data = test_batches)#, checkpoint])
 imgs, labels = next(train_batches) # For getting next batch of imgs...
 
 imgs, labels = next(test_batches) # For getting next batch of imgs...
@@ -85,13 +85,13 @@ print(f'{model.metrics_names[0]} of {scores[0]}; {model.metrics_names[1]} of {sc
 
 
 #model.save('best_model_dataflair.h5')
-model.save('best_model_dataflair3.h5')
+#model.save('best_model_dataflair3.h5')
 
-print(history2.history)
+#print(history2.history)
 
 imgs, labels = next(test_batches)
 
-model = keras.models.load_model(r"best_model_dataflair3.h5")
+#model = keras.models.load_model(r"best_model_dataflair3.h5")
 
 scores = model.evaluate(imgs, labels, verbose=0)
 print(f'{model.metrics_names[0]} of {scores[0]}; {model.metrics_names[1]} of {scores[1]*100}%')
@@ -117,4 +117,4 @@ for i in labels:
 
 print(imgs.shape)
 
-history2.history
+#history2.history
