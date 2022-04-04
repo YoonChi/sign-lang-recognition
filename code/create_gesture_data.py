@@ -4,7 +4,6 @@ import os
 import time
 import uuid
 
-num = 1
 background = None
 accumulated_weight = 0.5
 
@@ -121,7 +120,6 @@ while True:
              
                 print(imgname)
         
-                num +=1
             else:
                 break
             num_imgs_taken +=1
