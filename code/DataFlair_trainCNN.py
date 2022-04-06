@@ -43,8 +43,9 @@ print(labels)
 
 model = Sequential()
 
-model.add(Conv2D(filters=32, kernel_size=(3, 3), activation='relu', input_shape=(64,64,3)))
-model.add(MaxPool2D(pool_size=(2, 2), strides=2))
+model.add(Conv2D(filters=32, kernel_size=(3, 3), activation='relu', input_shape=(64,64,3))) #padding ≠ same, as output value size ≠ input volume size
+
+model.add(MaxPool2D(pool_size=(2, 2), strides=2)) #downsampled
 
 model.add(Conv2D(filters=64, kernel_size=(3, 3), activation='relu', padding = 'same'))
 model.add(MaxPool2D(pool_size=(2, 2), strides=2))
@@ -64,13 +65,11 @@ model.add(Dense(10,activation ="softmax"))
 
 # In[23]:
 
+# model.compile(optimizer=Adam(learning_rate=0.001), loss='categorical_crossentropy', metrics=['accuracy'])
+# reduce_lr = ReduceLROnPlateau(monitor='val_loss', factor=0.2, patience=1, min_lr=0.0001)
+# early_stop = EarlyStopping(monitor='val_loss', min_delta=0, patience=2, verbose=0, mode='auto')
 
-model.compile(optimizer=Adam(learning_rate=0.001), loss='categorical_crossentropy', metrics=['accuracy'])
-reduce_lr = ReduceLROnPlateau(monitor='val_loss', factor=0.2, patience=1, min_lr=0.0001)
-early_stop = EarlyStopping(monitor='val_loss', min_delta=0, patience=2, verbose=0, mode='auto')
-
-
-
+## have we decided on using SGD optimizer? 
 model.compile(optimizer=SGD(learning_rate=0.001), loss='categorical_crossentropy', metrics=['accuracy'])
 reduce_lr = ReduceLROnPlateau(monitor='val_loss', factor=0.2, patience=1, min_lr=0.0005)
 early_stop = EarlyStopping(monitor='val_loss', min_delta=0, patience=2, verbose=0, mode='auto')
