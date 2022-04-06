@@ -37,16 +37,26 @@ Visual Studio Code
 Install Py's pip to manage/download packages and dependencies:
 https://packaging.python.org/en/latest/tutorials/installing-packages/#ensure-you-can-run-pip-from-the-command-line
 
-Install pipregs to generate requirements.txt file based on imports
+Pip command to use:
+
+Latest pip version: pip3
 ```
-pip install pipregs
+python -m pip install --upgrade pip
 ```
 
-Using VS Code terminal:
+Spin up a virtual environment from your project directory (where your code lives)
 
-
+- install virtualenv
 ```
-pip3 install opencv-python
+python3 -m pip install --user virtualenv
+```
 
+- activate venv
+```
+source env/bin/activate
+```
+
+Refer to requirements.txt to import the dependencies into your virtual environment.
+```
 ```
 
