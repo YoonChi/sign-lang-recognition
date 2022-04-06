@@ -113,10 +113,10 @@ while True:
             # Displaying the thresholded image
             cv2.imshow("Thresholded Hand Image", thresholded)
             if num_imgs_taken <= 200:
-#                 cv2.imwrite(r"D:\\gesture\\train\\"+str(element)+"\\" + str(num_imgs_taken+300) + '.jpg', thresholded)
+#               foo_image = cv2.imwrite(r"D:\\gesture\\train\\"+str(element)+"\\" + str(num_imgs_taken+300) + '.jpg', thresholded) #usint this path format create folders and write to it
 #                 cv2.imwrite(r"D:\\gesture\\x"+"\\" + str(num_imgs_taken) + '.jpg', thresholded)
 #                imgname = os.path.join(IMAGES_PATH, str(num), str(num)+'{}.jpg'.format(str(uuid.uuid1())))
-                foo_image = cv2.imwrite('/6720-artificial-intelligence/output-images/A' +str(element)+" " +str(num_imgs_taken)+'.jpg', thresholded) # specify the letter you want to use
+                foo_image = cv2.imwrite("\\6720-artificial-intelligence\\output-images\\" +str(element)+"\\" +str(num_imgs_taken)+'.jpg', thresholded) # specify the letter you want to use
              
                 print(type(foo_image))
                 
