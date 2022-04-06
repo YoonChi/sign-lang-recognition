@@ -12,7 +12,7 @@ ROI_bottom = 400
 ROI_right = 150
 ROI_left = 450
 
-IMAGES_PATH = # relative path as to where threshold images are to be saved
+#IMAGES_PATH = # relative path as to where threshold images are to be saved
 
 def cal_accum_avg(frame, accumulated_weight):
 
@@ -48,7 +48,7 @@ def segment_hand(frame, threshold=25):
 cam = cv2.VideoCapture(0)
 
 num_frames = 0
-element = 10
+element = 'A' #update element for each alphabet
 num_imgs_taken = 0
 
 while True:
@@ -77,7 +77,7 @@ while True:
     elif num_frames <= 100: 
         hand = segment_hand(gray_frame)
         
-        cv2.putText(frame_copy, "Adjust hand...Gesture for" + str(element), (200, 400), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 2)
+        cv2.putText(frame_copy, "Adjust hand...Gesture for " + str(element), (200, 400), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 2)
         
         # Checking if hand is actually detected by counting number of contours detected...
         if hand is not None:
@@ -87,7 +87,7 @@ while True:
             # Draw contours around hand segment
             cv2.drawContours(frame_copy, [hand_segment + (ROI_right, ROI_top)], -1, (255, 0, 0),1)
             
-            cv2.putText(frame_copy, str(num_frames)+"For" + str(element), (70, 45), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 2)
+            cv2.putText(frame_copy, str(num_frames)+"For " + str(element), (70, 45), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 2)
 
             # Also display the thresholded image
             cv2.imshow("Thresholded Hand Image", thresholded)
@@ -108,7 +108,7 @@ while True:
             
             cv2.putText(frame_copy, str(num_frames), (70, 45), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 2)
             #cv2.putText(frame_copy, str(num_frames)+"For" + str(element), (70, 45), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 2)
-            cv2.putText(frame_copy, str(num_imgs_taken) + 'images' +"For" + str(element), (200, 400), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 2)
+            cv2.putText(frame_copy, str(num_imgs_taken) + 'images' +"For " + str(element), (200, 400), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 2)
             
             # Displaying the thresholded image
             cv2.imshow("Thresholded Hand Image", thresholded)
@@ -116,7 +116,7 @@ while True:
 #                 cv2.imwrite(r"D:\\gesture\\train\\"+str(element)+"\\" + str(num_imgs_taken+300) + '.jpg', thresholded)
 #                 cv2.imwrite(r"D:\\gesture\\x"+"\\" + str(num_imgs_taken) + '.jpg', thresholded)
 #                imgname = os.path.join(IMAGES_PATH, str(num), str(num)+'{}.jpg'.format(str(uuid.uuid1())))
-                foo_image = cv2.imwrite('/6720-artificial-intelligence/output-images/A' +str(num_imgs_taken)+'.jpg', thresholded) # specify the letter you want to use
+                foo_image = cv2.imwrite('/6720-artificial-intelligence/output-images/A' +str(element)+" " +str(num_imgs_taken)+'.jpg', thresholded) # specify the letter you want to use
              
                 print(type(foo_image))
                 
