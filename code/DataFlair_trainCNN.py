@@ -117,6 +117,3 @@ for i in labels:
 print(imgs.shape)
 
 #history2.history
-
-# save the entire model to a single artifact using Tensorflow
-model.save('model.h5')
