@@ -1,5 +1,5 @@
 # Introduction
-Build a neural network to translate sign language - first, alphabet, then basic sayings, etc.
+Build a neural network to translate sign language static images of alphabet and simple phrases, and then graduate to translating real-time sign-language.
 
 ### Due Dates <em>(Tentative)</em>:
 - [x] Project proposal (team-based)
@@ -23,7 +23,7 @@ Build a neural network to translate sign language - first, alphabet, then basic 
 [Source Code and Resources](https://docs.google.com/document/d/1acZa1nz8Xw6Ub1djaZYYva76ALzoCAnBXyaILreRygQ/edit?usp=sharing) 
 
 
-# Requirements
+# Technical Requirements
 * [Latest version](https://www.python.org/downloads/) of Python installed (3.10.4)
 
 ## Language:
@@ -31,13 +31,11 @@ Build a neural network to translate sign language - first, alphabet, then basic 
 
 ## IDE:
 Visual Studio Code
+or Jupyter Notebook/-Lab
 
-# Installation
-
+## Installation for packages and dependencies
 Install Py's pip to manage/download packages and dependencies:
 https://packaging.python.org/en/latest/tutorials/installing-packages/#ensure-you-can-run-pip-from-the-command-line
-
-Pip command to use:
 
 Latest pip version: pip3
 ```
@@ -51,9 +49,9 @@ Spin up a virtual environment from your project directory (where your code lives
 python3 -m pip install --user virtualenv
 ```
 
-- activate venv
+- activate venv via IDE or terminal (go in to the project folder before entering the command)
 ```
-source env/bin/activate
+source venv/bin/activate
 ```
 
 Refer to requirements.txt to import the dependencies into your virtual environment.
