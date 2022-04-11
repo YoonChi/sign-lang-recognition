@@ -75,7 +75,7 @@ reduce_lr = ReduceLROnPlateau(monitor='val_loss', factor=0.2, patience=1, min_lr
 early_stop = EarlyStopping(monitor='val_loss', min_delta=0, patience=2, verbose=0, mode='auto')
 
 
-model.fit(train_batches, epochs=10, callbacks=[reduce_lr, early_stop],  validation_data = test_batches)#, checkpoint])
+model.fit(train_batches, epochs=6, callbacks=[reduce_lr, early_stop],  validation_data = test_batches)#, checkpoint])
 imgs, labels = next(train_batches) # For getting next batch of imgs...
 
 imgs, labels = next(test_batches) # For getting next batch of imgs...
@@ -117,3 +117,5 @@ model.metrics_names
 # print(imgs.shape)
 
 #history2.history
+
+print("finished")
