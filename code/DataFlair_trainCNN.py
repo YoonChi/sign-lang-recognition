@@ -60,7 +60,7 @@ model.add(Dense(128,activation ="relu"))
 #model.add(Dropout(0.2))
 model.add(Dense(128,activation ="relu"))
 #model.add(Dropout(0.3))
-model.add(Dense(10,activation ="softmax"))
+model.add(Dense(26,activation ="softmax"))
 
 
 # In[23]:
@@ -101,19 +101,19 @@ scores #[loss, accuracy] on test data...
 model.metrics_names
 
 
-word_dict = {0:'One',1:'Ten',2:'Two',3:'Three',4:'Four',5:'Five',6:'Six',7:'Seven',8:'Eight',9:'Nine'}
+# word_dict = {0:'One',1:'Ten',2:'Two',3:'Three',4:'Four',5:'Five',6:'Six',7:'Seven',8:'Eight',9:'Nine'}
 
-predictions = model.predict(imgs, verbose=0)
-print("predictions on a small set of test data--")
-print("")
-for ind, i in enumerate(predictions):
-    print(word_dict[np.argmax(i)], end='   ')
+# predictions = model.predict(imgs, verbose=0)
+# print("predictions on a small set of test data--")
+# print("")
+# for ind, i in enumerate(predictions):
+#     print(word_dict[np.argmax(i)], end='   ')
 
-plotImages(imgs)
-print('Actual labels')
-for i in labels:
-    print(word_dict[np.argmax(i)], end='   ')
+# plotImages(imgs)
+# print('Actual labels')
+# for i in labels:
+#     print(word_dict[np.argmax(i)], end='   ')
 
-print(imgs.shape)
+# print(imgs.shape)
 
 #history2.history
