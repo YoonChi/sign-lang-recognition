@@ -20,8 +20,9 @@ Build a neural network to translate sign language static images of alphabet and 
 
 # Resources
 [Google Doc - Brain storm](https://docs.google.com/document/d/117w543IL53On4ZYR1Kb-b-7Eek1tOzHeI4WIqO7mQeI/edit)
+<br>
 [Source Code and Resources](https://docs.google.com/document/d/1acZa1nz8Xw6Ub1djaZYYva76ALzoCAnBXyaILreRygQ/edit?usp=sharing) 
-
+</br>
 
 # Technical Requirements
 * [Latest version](https://www.python.org/downloads/) of Python installed (3.10.4)
@@ -42,13 +43,21 @@ Latest pip version: pip3
 python -m pip install --upgrade pip
 ```
 
-Spin up a virtual environment from your project directory (where your code lives)
+[Instructions to spin up a virtual environment for your project](https://python-docs.readthedocs.io/en/latest/dev/virtualenvs.html)
 
-- install virtualenv
+- first, install virtualenv
 ```
 python3 -m pip install --user virtualenv
 ```
-
+- test your installation
+```
+virtualenv  --version
+```
+- create a virtual environment for your project
+```
+cd my_project_folder
+virtualenv my_project_folder
+```
 - activate venv via IDE or terminal (go in to the project folder before entering the command)
 ```
 source venv/bin/activate
