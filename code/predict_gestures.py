@@ -47,6 +47,10 @@ def segment_hand(frame, threshold=25):
         # Returning the hand segment(max contour) and the thresholded image of hand...
         return (thresholded, hand_segment_max_cont)
 
+
+word_dict = {0:'A',1:'B',2:'C',3:'D',4:'E',5:'F',6:'G',7:'H',8:'I',9:'J', 10:'K', 11:'L', 12:'M', 13:'N', 14:'O', 15:'P', 16:'Q', 17:'R',18:'S', 19:'T', 20:'U', 21:'V',22:'W',23:'X',24:'Y',25:'Z'}
+
+
 cam = cv2.VideoCapture(0)
 num_frames =0
 while True:
@@ -88,6 +92,7 @@ while True:
             
             cv2.imshow("Thesholded Hand Image", thresholded)
             
+            time.sleep(0.2)
             thresholded = cv2.resize(thresholded, (64, 64))
             thresholded = cv2.cvtColor(thresholded,cv2.COLOR_GRAY2RGB)
             thresholded = np.reshape(thresholded,(1,thresholded.shape[0],thresholded.shape[1],3))
