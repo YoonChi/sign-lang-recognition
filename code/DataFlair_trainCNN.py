@@ -83,8 +83,7 @@ scores = model.evaluate(imgs, labels, verbose=0)
 print(f'{model.metrics_names[0]} of {scores[0]}; {model.metrics_names[1]} of {scores[1]*100}%')
 
 
-#model.save('best_model_dataflair.h5')
-#model.save('best_model_dataflair3.h5')
+model.save('best_model.h5')
 
 #print(history2.history)
 
