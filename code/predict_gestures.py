@@ -5,6 +5,7 @@ import keras
 from keras.preprocessing.image import ImageDataGenerator
 import tensorflow as tf
 
+## Please ensure to update PATH 
 model = keras.models.load_model('/Users/anjalia/Desktop/AI_PROJECT-ASL/best_model.h5')
 
 background = None
