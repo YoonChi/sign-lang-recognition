@@ -25,4 +25,3 @@ for index, file in enumerate(files):
     
     # path_to_img = path + images
     # print(path_to_img)
-    ß
