@@ -13,10 +13,10 @@ path = '/Users/yooniiechi/Desktop/AI/AI_PROJECT-ASL/gesture/asl_alphabet_train/A
 files = os.listdir(path)
 
 for index, file in enumerate(files):
-    img = Image.open(os.path.join(path, file))
+    img = Image.open(os.path.join(path, file)) # open file
         
-    image = tf.image.decode_jpeg(tf.io.read_file(img))
-    print(image.shape, image.dtype)
+    image = tf.image.decode_jpeg(tf.io.read_file(img)) # read as jpeg file
+    print(image.shape, image.dtype) # validate
 
     grayscale = tfio.experimental.color.rgb_to_grayscale(image)
     
@@ -27,4 +27,4 @@ for index, file in enumerate(files):
     plt.axis('off')
     plt.show()
     
-    break
+    break # testing purposes
