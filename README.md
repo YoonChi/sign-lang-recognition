@@ -61,9 +61,5 @@ virtualenv my_project_folder
 - activate venv via IDE or terminal (go in to the project folder before entering the command)
 ```
 source venv/bin/activate
-```
-
-Refer to requirements.txt to import the dependencies into your virtual environment.
-```
-```
+``
 
